@@ -1,0 +1,2 @@
+# 将ipynb转成markdown的命令
+jupyter nbconvert --to markdown '文件名.ipynb'

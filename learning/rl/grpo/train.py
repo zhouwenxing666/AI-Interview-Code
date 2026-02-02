@@ -257,7 +257,6 @@ class GRPOTrainer:
                 mean_group_rewards = rewards.mean()
                 std_group_rewards = rewards.std()
                 
-                # GRPO的优势是句子粒度的，而非token粒度的
                 advantages = (rewards - mean_group_rewards) / (std_group_rewards + 1e-8) # shape: [num_generations]
                 batch_advantages.append(advantages)
         
